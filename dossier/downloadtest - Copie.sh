@@ -1,38 +1,4 @@
 #!/bin/bash
-#francois
-
-#wget http://glpi.monkey-class.com/dossier.zip
-#fonction qui englobe
-taille {
-
-#varriable dossier 
-read -p "Lien ZIP : " dossier
-#on recupere l extetion du fichier
-ext=${dossier##*\.}
-#on recupere la base du fichier
-base=$(basename -s .zip $dossier)
-
-#on verifie que le dossier est bien un dossier zip
-if [ "$ext" = "zip" ]
-then
-	out=$(wegt -N $dossier 2>&1)
-
-	if [[ $? -eq 0 && $out ]]
-	then
-		txt=$(unzip -l $base.zip *.txt | tail -n 1 | awk '{print $1}')
-
-		echo "get size : $txt"
-	else
-		echo "aucun dossier"
-	fi
-else
-	echo "etete"
-fi
-
-}
-taille:x
-
-#!/bin/bash
 
 function getSize {
 
