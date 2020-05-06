@@ -1,13 +1,11 @@
-#!/bin/bash
-
-fonction ()
-{
-ls | convert -resize 50
-}
-tab=`ls *`
-for list in ${tab[@]}
+#!/bin/bash 
+#francois
+dossier=dossier;
+for file in "$dossier"/*.{jpeg,jpg};
 do
-	$list
-	
+	output="$(basename "$file")"
+	echo "image: $file RESIZED 50%"/""
+	convert -resize 50% $file $dossier/"RESIZE_"$(basename $file);
 done
 
+ls -l dossier

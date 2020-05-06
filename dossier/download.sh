@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#ma version
 #wget http://glpi.monkey-class.com/dossier.zip
 #unzip dossier.zip -d /home/pi/Documents
 cd /home/pi/Documents/dossier

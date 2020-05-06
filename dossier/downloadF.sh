@@ -1,4 +1,5 @@
 #!/bin/bash
+#francois
 
 function getSize {
 
