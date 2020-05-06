@@ -36,4 +36,4 @@ else
         echo -e "${rouge}Ceci n'est pas un lien zip!!!${neutre}"
 fi
 }
-getSize:x
+getSize
